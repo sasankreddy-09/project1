@@ -1,0 +1,25 @@
+<% layout("./layouts/boilerplate.ejs") %>
+<br>
+<body>
+    <div class="row offset-2">
+    <h1>Editing Section</h1>
+    <div class="col-6 "><br>
+    <form action="/listing?_method=PATCH" method="post" novalidate class="needs-validation">
+        <div class="mb-3">
+        <label class="form-label"for="title">Title: </label>
+        <input class="form-control" type="text" name="title" value="<%=arr.title%>"></div>
+        <div><label class="form-label"for="Description">Description: </label><br>
+        <textarea name="description" id="s" rows="2" cols=53" required class="form-control"></textarea></div>
+        <div class="row"><div class="col-4"><label class="form-label"for="price">price: </label>
+        <input class="form-control" type="number" name="price" min="0" value="<%=arr.price%>"></div>
+        <div class="col-6"><label class="form-label"for="location">location: </label>
+        <input class="form-control" type="text" name="location" value="<%=arr.location%>"></div></div>
+        <div><label class="form-label"for="country">country: </label>
+        <input class="form-control" type="text" name="country"value="<%=arr.country%>"></div>
+        <div><label class="form-label"for="image">image: </label>
+        <input class="form-control" type="text" name="url"value="<%=arr.image.url%>"></div><br>
+        <button class="btn btn-danger">EDIT</button><br><br>
+    </form>
+</div>
+</div>
+</body>

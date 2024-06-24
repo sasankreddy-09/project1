@@ -1,0 +1,14 @@
+<% layout("./layouts/boilerplate.ejs") %>
+<body>
+    <div class="navbar">
+        <div class="child">Home</div>
+        <div class="child">Listing</div>
+        <div class="child">Description</div>
+    </div>
+    <div class="container">
+        <% for(let arrs of arr){ %>
+            <%= arrs.title %>
+            <img src=<%=arrs.image.url.toString()%> alt=<%=arrs.title%>>
+        <% }%><br>
+    </div>
+</body>
